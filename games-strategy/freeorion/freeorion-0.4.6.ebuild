@@ -27,7 +27,6 @@ RDEPEND="
 	media-libs/libsdl[X,opengl,video]
 	media-libs/libvorbis
 	media-libs/openal
-	sci-physics/bullet
 	sys-libs/zlib
 	virtual/opengl"
 DEPEND="${RDEPEND}
@@ -86,7 +85,7 @@ src_install() {
 	dogameslib "${CMAKE_BUILD_DIR}"/libGiGi*.so || die
 
 	# other
-	dodoc "${CMAKE_USE_DIR}"/changelog.txt || die
+	dodoc "${CMAKE_USE_DIR}"/ChangeLog.md || die
 	newicon "${CMAKE_USE_DIR}"/default/data/art/icons/FO_Icon_32x32.png \
 		${PN}.png || die
 	make_desktop_entry ${PN} ${PN} ${PN}
