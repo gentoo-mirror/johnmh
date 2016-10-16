@@ -51,11 +51,6 @@ src_unpack() {
 src_prepare() {
 	# parse subdir sets -O3
 	sed -e "s:-O3::" -i parse/CMakeLists.txt
-	epatch "${FILESDIR}/${P}-boost-1.61.patch"
-
-	# For snapshots, the following can be used to the set revision
-	# for display in game -- update on bump!
-	# sed -i -e 's/???/8051/' CMakeLists.txt
 }
 
 src_configure() {
